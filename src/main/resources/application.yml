@@ -1,0 +1,13 @@
+server:
+  port: 8090
+  
+eureka:
+  client:
+    service-url:
+      defaulZone: http://localhost:8761/eureka
+
+zuul:
+  routes:
+    itemInfo:
+      path: /item/**
+      url: http://localhost:9001/item
